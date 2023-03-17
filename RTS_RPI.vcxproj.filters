@@ -1,0 +1,260 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="template">
+      <UniqueIdentifier>{baab6320-0a9f-4d21-b6b3-d721a5944cd9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="template\Source Files">
+      <UniqueIdentifier>{6057b03a-cefe-462f-a1cb-594a4de780d5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="template\Header Files">
+      <UniqueIdentifier>{85d0810b-4f87-4121-a442-cc181418aaa1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ImGUI">
+      <UniqueIdentifier>{a38d6656-df03-4e2d-b4b9-a17273878778}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="template\Shaders">
+      <UniqueIdentifier>{b3249907-3c07-4cbe-8ddc-ada305b29179}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets">
+      <UniqueIdentifier>{3064a6f5-35c6-40d1-b49d-495ace839685}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="template\Bullet Physics">
+      <UniqueIdentifier>{0cdb4d35-631c-410c-875f-d7e22e6eb943}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game Objects">
+      <UniqueIdentifier>{051d4868-c3ea-46d0-9ff9-a5ded3f70412}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Procedural Generation">
+      <UniqueIdentifier>{7cc8871a-abea-4112-bffd-dc346c36a097}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Game.cpp" />
+    <ClCompile Include="Template\main.cpp">
+      <Filter>template\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Template\mWindow.cpp">
+      <Filter>template\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Template\stb_image.cpp">
+      <Filter>template\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Template\Surface.cpp">
+      <Filter>template\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Template\Timer.cpp">
+      <Filter>template\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ImGUI\imgui_demo.cpp">
+      <Filter>ImGUI</Filter>
+    </ClCompile>
+    <ClCompile Include="ImGUI\imgui_draw.cpp">
+      <Filter>ImGUI</Filter>
+    </ClCompile>
+    <ClCompile Include="ImGUI\imgui_impl_opengl3.cpp">
+      <Filter>ImGUI</Filter>
+    </ClCompile>
+    <ClCompile Include="ImGUI\imgui_tables.cpp">
+      <Filter>ImGUI</Filter>
+    </ClCompile>
+    <ClCompile Include="ImGUI\imgui_widgets.cpp">
+      <Filter>ImGUI</Filter>
+    </ClCompile>
+    <ClCompile Include="ImGUI\imgui.cpp">
+      <Filter>ImGUI</Filter>
+    </ClCompile>
+    <ClCompile Include="Physics.cpp">
+      <Filter>template\Bullet Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="DebugDrawer.cpp">
+      <Filter>template\Bullet Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="Object.cpp">
+      <Filter>template\Bullet Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="Tank.cpp">
+      <Filter>Game Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="model.cpp">
+      <Filter>template\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Procedural.cpp">
+      <Filter>Procedural Generation</Filter>
+    </ClCompile>
+    <ClCompile Include="Scene.cpp">
+      <Filter>template\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Terrain.cpp">
+      <Filter>Procedural Generation</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Game.h" />
+    <ClInclude Include="Template\mWindow.h">
+      <Filter>template\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Template\stb_image.h">
+      <Filter>template\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Template\Surface.h">
+      <Filter>template\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Template\Timer.h">
+      <Filter>template\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Template\typedefs.h">
+      <Filter>template\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ImGUI\imgui_impl_opengl3.h">
+      <Filter>ImGUI</Filter>
+    </ClInclude>
+    <ClInclude Include="ImGUI\imgui_impl_opengl3_loader.h">
+      <Filter>ImGUI</Filter>
+    </ClInclude>
+    <ClInclude Include="ImGUI\imgui_internal.h">
+      <Filter>ImGUI</Filter>
+    </ClInclude>
+    <ClInclude Include="ImGUI\imstb_rectpack.h">
+      <Filter>ImGUI</Filter>
+    </ClInclude>
+    <ClInclude Include="ImGUI\imstb_textedit.h">
+      <Filter>ImGUI</Filter>
+    </ClInclude>
+    <ClInclude Include="ImGUI\imstb_truetype.h">
+      <Filter>ImGUI</Filter>
+    </ClInclude>
+    <ClInclude Include="ImGUI\imconfig.h">
+      <Filter>ImGUI</Filter>
+    </ClInclude>
+    <ClInclude Include="ImGUI\imgui.h">
+      <Filter>ImGUI</Filter>
+    </ClInclude>
+    <ClInclude Include="Template\Helper.h">
+      <Filter>template\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="shaders.h">
+      <Filter>template\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="camera.h">
+      <Filter>template\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="mesh.h">
+      <Filter>template\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="model.h">
+      <Filter>template\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Physics.h">
+      <Filter>template\Bullet Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="DebugDrawer.h">
+      <Filter>template\Bullet Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="Object.h">
+      <Filter>template\Bullet Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="Tank.h">
+      <Filter>Game Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="Procedural.h">
+      <Filter>Procedural Generation</Filter>
+    </ClInclude>
+    <ClInclude Include="Scene.h">
+      <Filter>template\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Terrain.h">
+      <Filter>Procedural Generation</Filter>
+    </ClInclude>
+    <ClInclude Include="Template\PerlinNoise.hpp">
+      <Filter>template\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Collision.h">
+      <Filter>template\Bullet Physics</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Shaders\FragmentShader.glsl">
+      <Filter>template\Shaders</Filter>
+    </None>
+    <None Include="Shaders\VertexShader.glsl">
+      <Filter>template\Shaders</Filter>
+    </None>
+    <None Include="Shaders\model_loading_fs.glsl">
+      <Filter>template\Shaders</Filter>
+    </None>
+    <None Include="Shaders\model_loading_vs.glsl">
+      <Filter>template\Shaders</Filter>
+    </None>
+    <None Include="Shaders\DebugFragment.glsl">
+      <Filter>template\Shaders</Filter>
+    </None>
+    <None Include="Shaders\DebugVertex.glsl">
+      <Filter>template\Shaders</Filter>
+    </None>
+    <None Include="assets\floor.mtl">
+      <Filter>Assets</Filter>
+    </None>
+    <None Include="Shaders\floor_model_vs.glsl">
+      <Filter>template\Shaders</Filter>
+    </None>
+    <None Include="Shaders\floor_model_fs.glsl">
+      <Filter>template\Shaders</Filter>
+    </None>
+    <None Include="assets\cube.mtl">
+      <Filter>Assets</Filter>
+    </None>
+    <None Include="Shaders\light_fs.glsl">
+      <Filter>template\Shaders</Filter>
+    </None>
+    <None Include="Shaders\light_vs.glsl">
+      <Filter>template\Shaders</Filter>
+    </None>
+    <None Include="assets\Tank\SimpleTankReduced2.mtl">
+      <Filter>Assets</Filter>
+    </None>
+    <None Include="assets\bullet.mtl">
+      <Filter>Assets</Filter>
+    </None>
+    <None Include="Shaders\bullet_fs.glsl">
+      <Filter>template\Shaders</Filter>
+    </None>
+    <None Include="Shaders\bullet_vs.glsl">
+      <Filter>template\Shaders</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="assets\Tank\Tank_body.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="assets\Tank\Tank_track.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="assets\Tank\Tank_body_specular.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="assets\Tank\Tank_track_specular.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="assets\grass_diffuse.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="assets\grass_specular.png">
+      <Filter>Assets</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <Object Include="assets\floor.obj">
+      <Filter>Assets</Filter>
+    </Object>
+    <Object Include="assets\Tank\SimpleTankReduced2.obj">
+      <Filter>Assets</Filter>
+    </Object>
+    <Object Include="assets\cube.obj">
+      <Filter>Assets</Filter>
+    </Object>
+    <Object Include="assets\bullet.obj">
+      <Filter>Assets</Filter>
+    </Object>
+  </ItemGroup>
+</Project>

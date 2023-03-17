@@ -1,0 +1,203 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|ARM">
+      <Configuration>Debug</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|ARM">
+      <Configuration>Release</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{a6b5633f-3523-46d3-8642-5a2dc081298b}</ProjectGuid>
+    <Keyword>Linux</Keyword>
+    <RootNamespace>RTS_RPI</RootNamespace>
+    <MinimumVisualStudioVersion>15.0</MinimumVisualStudioVersion>
+    <ApplicationType>Linux</ApplicationType>
+    <ApplicationTypeRevision>1.0</ApplicationTypeRevision>
+    <TargetLinuxPlatform>Raspberry</TargetLinuxPlatform>
+    <LinuxProjectType>{8748239F-558C-44D1-944B-07B09C35B330}</LinuxProjectType>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'" Label="Configuration">
+    <UseDebugLibraries>true</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'" Label="Configuration">
+    <UseDebugLibraries>false</UseDebugLibraries>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="Shared" />
+  <ImportGroup Label="PropertySheets" />
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+    <IncludePath>
+    </IncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+    <Link>
+      <LibraryDependencies>GLESv2;EGL;pthread;X11;assimp;BulletCollision;BulletSoftBody;BulletDynamics;LinearMath</LibraryDependencies>
+    </Link>
+    <RemotePostBuildEvent>
+      <Command>
+      </Command>
+      <Message>
+      </Message>
+    </RemotePostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
+    <Link>
+      <LibraryDependencies>GLESv2;EGL;pthread;X11;assimp;BulletCollision;BulletSoftBody;BulletDynamics;LinearMath</LibraryDependencies>
+    </Link>
+    <RemotePostBuildEvent>
+      <Command>
+      </Command>
+      <Message>
+      </Message>
+    </RemotePostBuildEvent>
+    <ClCompile>
+      <TreatWarningAsError>false</TreatWarningAsError>
+      <AdditionalIncludeDirectories>/usr/include/bullet;/usr/include/bullet/LinearMath;%(ClCompile.AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <UndefinePreprocessorDefinitions>__clang__</UndefinePreprocessorDefinitions>
+      <CppLanguageStandard>c++17</CppLanguageStandard>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="DebugDrawer.cpp" />
+    <ClCompile Include="Game.cpp" />
+    <ClCompile Include="ImGUI\imgui.cpp">
+      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">TurnOffAllWarnings</WarningLevel>
+      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="ImGUI\imgui_demo.cpp">
+      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">TurnOffAllWarnings</WarningLevel>
+      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="ImGUI\imgui_draw.cpp">
+      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">TurnOffAllWarnings</WarningLevel>
+      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="ImGUI\imgui_impl_opengl3.cpp">
+      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">TurnOffAllWarnings</WarningLevel>
+      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="ImGUI\imgui_tables.cpp">
+      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">TurnOffAllWarnings</WarningLevel>
+      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="ImGUI\imgui_widgets.cpp">
+      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">TurnOffAllWarnings</WarningLevel>
+      <WarningLevel Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">TurnOffAllWarnings</WarningLevel>
+    </ClCompile>
+    <ClCompile Include="model.cpp" />
+    <ClCompile Include="Scene.cpp" />
+    <ClCompile Include="Procedural.cpp" />
+    <ClCompile Include="Object.cpp" />
+    <ClCompile Include="Physics.cpp" />
+    <ClCompile Include="Tank.cpp" />
+    <ClCompile Include="Template\main.cpp" />
+    <ClCompile Include="Template\mWindow.cpp" />
+    <ClCompile Include="Template\stb_image.cpp" />
+    <ClCompile Include="Template\Surface.cpp" />
+    <ClCompile Include="Template\Timer.cpp" />
+    <ClCompile Include="Terrain.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="camera.h" />
+    <ClInclude Include="Collision.h" />
+    <ClInclude Include="DebugDrawer.h" />
+    <ClInclude Include="Game.h" />
+    <ClInclude Include="ImGUI\imconfig.h" />
+    <ClInclude Include="ImGUI\imgui.h" />
+    <ClInclude Include="ImGUI\imgui_impl_opengl3.h" />
+    <ClInclude Include="ImGUI\imgui_impl_opengl3_loader.h" />
+    <ClInclude Include="ImGUI\imgui_internal.h" />
+    <ClInclude Include="ImGUI\imstb_rectpack.h" />
+    <ClInclude Include="ImGUI\imstb_textedit.h" />
+    <ClInclude Include="ImGUI\imstb_truetype.h" />
+    <ClInclude Include="mesh.h" />
+    <ClInclude Include="model.h" />
+    <ClInclude Include="Scene.h" />
+    <ClInclude Include="Procedural.h" />
+    <ClInclude Include="Object.h" />
+    <ClInclude Include="Physics.h" />
+    <ClInclude Include="shaders.h" />
+    <ClInclude Include="Tank.h" />
+    <ClInclude Include="Template\Helper.h" />
+    <ClInclude Include="Template\mWindow.h" />
+    <ClInclude Include="Template\PerlinNoise.hpp" />
+    <ClInclude Include="Template\stb_image.h" />
+    <ClInclude Include="Template\Surface.h" />
+    <ClInclude Include="Template\Timer.h" />
+    <ClInclude Include="Template\typedefs.h" />
+    <ClInclude Include="Terrain.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\bullet.mtl">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">true</ExcludedFromBuild>
+    </None>
+    <None Include="assets\cube.mtl">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">true</ExcludedFromBuild>
+    </None>
+    <None Include="assets\floor.mtl">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">true</ExcludedFromBuild>
+    </None>
+    <None Include="assets\Tank\SimpleTankReduced2.mtl">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">true</ExcludedFromBuild>
+    </None>
+    <None Include="Shaders\bullet_fs.glsl" />
+    <None Include="Shaders\bullet_vs.glsl" />
+    <None Include="Shaders\floor_model_fs.glsl" />
+    <None Include="Shaders\floor_model_vs.glsl" />
+    <None Include="Shaders\DebugFragment.glsl" />
+    <None Include="Shaders\DebugVertex.glsl" />
+    <None Include="Shaders\light_fs.glsl" />
+    <None Include="Shaders\light_vs.glsl" />
+    <None Include="Shaders\model_loading_fs.glsl" />
+    <None Include="Shaders\model_loading_vs.glsl" />
+    <None Include="Shaders\FragmentShader.glsl" />
+    <None Include="Shaders\VertexShader.glsl" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="assets\grass_diffuse.png" />
+    <Image Include="assets\grass_specular.png" />
+    <Image Include="assets\Tank\Tank_body.png" />
+    <Image Include="assets\Tank\Tank_body_specular.png" />
+    <Image Include="assets\Tank\Tank_track.png" />
+    <Image Include="assets\Tank\Tank_track_specular.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Object Include="assets\bullet.obj">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">true</ExcludedFromBuild>
+    </Object>
+    <Object Include="assets\cube.obj">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">true</ExcludedFromBuild>
+    </Object>
+    <Object Include="assets\floor.obj">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">true</ExcludedFromBuild>
+    </Object>
+    <Object Include="assets\Tank\SimpleTankReduced2.obj">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">true</ExcludedFromBuild>
+    </Object>
+  </ItemGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+    <ClCompile>
+      <TreatWarningAsError>false</TreatWarningAsError>
+      <UndefinePreprocessorDefinitions>__clang__</UndefinePreprocessorDefinitions>
+      <AdditionalIncludeDirectories>/usr/include/bullet;/usr/include/bullet/LinearMath;%(ClCompile.AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <CppLanguageStandard>c++17</CppLanguageStandard>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets" />
+</Project>
